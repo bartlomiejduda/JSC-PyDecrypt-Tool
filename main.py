@@ -1,13 +1,12 @@
-import gzip
-from typing import Optional
-import xxtea
-import sys
 import argparse
+import gzip
+import sys
+from typing import Optional
 
+import xxtea
 from reversebox.io_files.check_file import check_file
 
 from logger import get_logger
-
 
 # Ver    Date        Author               Comment
 # v0.1   03.09.2022  Bartlomiej Duda      -
@@ -21,8 +20,8 @@ PROGRAM_NAME = f"JSC PyDecrypt Tool {VERSION_NUM}"
 
 
 def export_data(
-        jsc_file_path: str, encryption_key_str: str, output_file_path: str
-                ) -> Optional[tuple]:
+    jsc_file_path: str, encryption_key_str: str, output_file_path: str
+) -> Optional[tuple]:
     """
     Function for decrypting JSC files
     """
@@ -38,10 +37,10 @@ def export_data(
     if len(output_data) == 0:
         return "WRONG_KEY", "Invalid encryption key!"
 
-    #output_data = zlib.decompress(output_data, 16 + zlib.MAX_WBITS)
+    # output_data = zlib.decompress(output_data, 16 + zlib.MAX_WBITS)
     output_data = gzip.decompress(output_data)
 
-    #output_data = json.dumps(output_data, indent=4)
+    # output_data = json.dumps(output_data, indent=4)
 
     js_file = open(output_file_path, "wb")
     js_file.write(output_data)
