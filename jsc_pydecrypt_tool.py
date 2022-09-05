@@ -1,8 +1,10 @@
 import argparse
 import gzip
+import io
 import sys
 import zlib
 from typing import Optional
+from zipfile import ZipFile, BadZipFile
 
 import xxtea
 from reversebox.io_files.check_file import check_file
@@ -50,10 +52,12 @@ def export_data(
 
     if not is_gzip_file:
         try:
-            output_data = zlib.decompress(output_data)
-            logger.info("IT IS a ZLIB archive.")
-        except zlib.error as error:
-            logger.info("It is NOT a ZLIB archive.")
+            zip_file = io.BytesIO(output_data)
+            ZipFile(zip_file)
+            output_file_path += ".zip"
+            logger.info("IT IS a ZIP archive.")
+        except BadZipFile as error:
+            logger.info("It is NOT a ZIP archive.")
 
     # output_data = json.dumps(output_data, indent=4)
 

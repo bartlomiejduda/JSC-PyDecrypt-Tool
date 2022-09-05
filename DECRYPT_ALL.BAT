@@ -13,7 +13,7 @@ echo.
 
 setlocal enabledelayedexpansion
 
-set ENCRYPTION_KEY="f86f2406-6ef3-45"
+set ENCRYPTION_KEY="431FEWJOTe-gecTW"
 
 echo Activating venv...
 CALL .\venv\Scripts\activate.bat
