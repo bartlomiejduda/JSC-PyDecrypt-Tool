@@ -4,7 +4,7 @@ import io
 import sys
 import zlib
 from typing import Optional
-from zipfile import ZipFile, BadZipFile
+from zipfile import BadZipFile, ZipFile
 
 import xxtea
 from reversebox.io_files.check_file import check_file
@@ -59,8 +59,6 @@ def export_data(
         except BadZipFile as error:
             logger.info("It is NOT a ZIP archive.")
 
-    # output_data = json.dumps(output_data, indent=4)
-
     js_file = open(output_file_path, "wb")
     js_file.write(output_data)
 
@@ -78,8 +76,6 @@ def main():
     parser.add_argument("-d", "--decrypt", metavar=("<jsc_file_path>", "<encryption_key>", "<output_file_path>"),
                         type=str, nargs=3, required=False, help="Decrypt data")
 
-    # parser.add_argument("-e", "--encrypt", metavar=("<xml_file_path>", "<encryption_key>", "<eco_file_path>"),
-    #                     type=str, nargs=3, required=False, help="Encrypt data")
     # fmt: on
 
     if len(sys.argv) == 1:
@@ -93,11 +89,6 @@ def main():
         if code != "OK":
             logger.error(f"{code}: {status}")
             sys.exit(-1)
-    # elif args.encrypt is not None:
-    #     code, status = import_data(args.encrypt[0], args.encrypt[1], args.encrypt[2])
-    #     if code != "OK":
-    #         logger.error(f"{code}: {status}")
-    #         sys.exit(-2)
 
     logger.info("End of main... Program has been executed successfully!")
     sys.exit(0)

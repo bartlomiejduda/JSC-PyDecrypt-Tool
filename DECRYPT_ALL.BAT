@@ -13,7 +13,7 @@ echo.
 
 setlocal enabledelayedexpansion
 
-set ENCRYPTION_KEY="431FEWJOTe-gecTW"
+set ENCRYPTION_KEY="967d48e5-4124-4e"
 
 echo Activating venv...
 CALL .\venv\Scripts\activate.bat
@@ -32,4 +32,3 @@ python ".\jsc_pydecrypt_tool.py" "-d" !input_file! !ENCRYPTION_KEY! !output_file
 
 echo Program has finished!
 pause
-
