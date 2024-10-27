@@ -1,9 +1,9 @@
-black==22.3.0
+black==24.3.0
 cffi==1.15.1
 isort==5.10.1
 mypy==0.960
 pre-commit==2.20.0
 pylint==2.14.0
 pytest==7.1.2
-ReverseBox==0.1.2
-xxtea-py==1.0.3
+ReverseBox>=0.17.2
+xxtea==3.3.0

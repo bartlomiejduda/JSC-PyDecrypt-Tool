@@ -2,23 +2,21 @@ import argparse
 import gzip
 import io
 import sys
-import zlib
 from typing import Optional
 from zipfile import BadZipFile, ZipFile
-
 import xxtea
+from reversebox.common.logger import get_logger
 from reversebox.io_files.check_file import check_file
-
-from logger import get_logger
 
 # Ver    Date        Author               Comment
 # v0.1   03.09.2022  Bartlomiej Duda      -
 # v0.2   04.09.2022  Bartlomiej Duda      -
+# v1.0   27.10.2024  Bartlomiej Duda      Update packages
 
 
 logger = get_logger(__name__)
 
-VERSION_NUM = "v0.2"
+VERSION_NUM = "v1.0"
 EXE_FILE_NAME = f"jsc_pydecrypt_tool_{VERSION_NUM}.exe"
 PROGRAM_NAME = f"JSC PyDecrypt Tool {VERSION_NUM}"
 
@@ -35,7 +33,9 @@ def export_data(
     if code != "OK":
         return code, status
 
-    jsc_file_data = open(jsc_file_path, "rb").read()
+    jsc_file = open(jsc_file_path, "rb")
+    jsc_file_data = jsc_file.read()
+    jsc_file.close()
 
     logger.info(f"Decrypting with key = {encryption_key_str}")
     output_data = xxtea.decrypt(jsc_file_data, encryption_key_str)
