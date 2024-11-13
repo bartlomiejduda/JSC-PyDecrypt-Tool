@@ -25,16 +25,16 @@ options:
 
 # Building on Windows
 
-1. Install  **[Python 3.11.0](https://www.python.org/downloads/)**
-2. Install **[PyCharm 2024 (Community Edition)](https://www.jetbrains.com/pycharm/download/#section=windows)**
-3. Create virtualenv and activate it
-   - python3 -m venv \path\to\new\virtual\environment
-   - .\venv\Scripts\activate.bat
-4. Install all libraries from requirements.txt
-   - pip3 install -r requirements.txt
-5. Run the jsc_pydecrypt_tool.py file with proper command line arguments
-
-NOTE: There is also "DECRYPT_ALL.BAT" script which can
-be used for batch processing. Just set correct
-encryption key, put your files inside "INPUT"
-directory and run the script.
+1. Download and install  **[Python 3.11.6](https://www.python.org/downloads/release/python-3116/)**. Remember to add Python to PATH during installation
+2. Download project's source code and save it in "JSC-PyDecrypt-Tool-main" directory
+3. Go to the directory containing source code
+   - ```cd JSC-PyDecrypt-Tool-main```
+4. Create virtualenv and activate it
+   - ```python -m venv my_env```
+   - ```.\my_env\Scripts\activate.bat```
+5. Install all libraries from requirements.txt file
+   - ```pip install -r requirements.txt```
+6. Add project's directory to PYTHONPATH environment variable
+   - ```set PYTHONPATH=C:\Users\user\Desktop\JSC-PyDecrypt-Tool-main```
+7. Run the jsc_pydecrypt_tool.py file with proper command line arguments
+   - ```python jsc_pydecrypt_tool.py -d project.jsc "secret" project.js```

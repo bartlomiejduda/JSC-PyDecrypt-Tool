@@ -7,3 +7,4 @@ pylint==2.14.0
 pytest==7.1.2
 ReverseBox>=0.17.2
 xxtea==3.3.0
+xxtea-py==1.0.3
