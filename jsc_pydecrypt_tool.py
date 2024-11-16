@@ -4,6 +4,7 @@ import io
 import sys
 from typing import Optional
 from zipfile import BadZipFile, ZipFile
+
 import xxtea
 from reversebox.common.logger import get_logger
 from reversebox.io_files.check_file import check_file
@@ -12,11 +13,12 @@ from reversebox.io_files.check_file import check_file
 # v0.1   03.09.2022  Bartlomiej Duda      -
 # v0.2   04.09.2022  Bartlomiej Duda      -
 # v1.0   27.10.2024  Bartlomiej Duda      Update packages
+# v1.1   16.11.2024  Bartlomiej Duda      Update packages
 
 
 logger = get_logger(__name__)
 
-VERSION_NUM = "v1.0"
+VERSION_NUM = "v1.1"
 EXE_FILE_NAME = f"jsc_pydecrypt_tool_{VERSION_NUM}.exe"
 PROGRAM_NAME = f"JSC PyDecrypt Tool {VERSION_NUM}"
 
