@@ -26,15 +26,16 @@ options:
 # Building on Windows
 
 1. Download and install  **[Python 3.11.6](https://www.python.org/downloads/release/python-3116/)**. Remember to add Python to PATH during installation
-2. Download project's source code and save it in "JSC-PyDecrypt-Tool-main" directory
-3. Go to the directory containing source code
+2. Download and install **[Microsoft C++ Build Tools](https://visualstudio.microsoft.com/pl/visual-cpp-build-tools/)**
+3. Download project's source code and save it in "JSC-PyDecrypt-Tool-main" directory
+4. Go to the directory containing source code
    - ```cd JSC-PyDecrypt-Tool-main```
-4. Create virtualenv and activate it
+5. Create virtualenv and activate it
    - ```python -m venv my_env```
    - ```.\my_env\Scripts\activate.bat```
-5. Install all libraries from requirements.txt file
+6. Install all libraries from requirements.txt file
    - ```pip install -r requirements.txt```
-6. Add project's directory to PYTHONPATH environment variable
+7. Add project's directory to PYTHONPATH environment variable
    - ```set PYTHONPATH=C:\Users\user\Desktop\JSC-PyDecrypt-Tool-main```
-7. Run the jsc_pydecrypt_tool.py file with proper command line arguments
+8. Run the jsc_pydecrypt_tool.py file with proper command line arguments
    - ```python jsc_pydecrypt_tool.py -d project.jsc "secret" project.js```
