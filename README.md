@@ -1,7 +1,7 @@
 # Info
 
 **JSC-PyDecrypt-Tool** is a Python program for decrypting Cocos2d JSC files.<br>
-<br>You need valid key to decrypt files. You can use **[Frida](https://frida.re/)** with my **[XXTEA Script](https://github.com/bartlomiejduda/Tools/blob/master/NEW%20Tools/Cocos2d/cocos2d_xxtea_script.js)** to get
+<br>You need valid key to decrypt files. You can use **[Frida](https://frida.re/)** with my **[XXTEA Script](https://github.com/bartlomiejduda/Tools/blob/master/Frida%20Scripts/cocos2d/cocos2d_xxtea_script.js)** to get
 the key from any Cocos2d android app.
 
 Example frida command:<br>
