@@ -39,3 +39,11 @@ options:
    - ```set PYTHONPATH=C:\Users\user\Desktop\JSC-PyDecrypt-Tool-main```
 8. Run the jsc_pydecrypt_tool.py file with proper command line arguments
    - ```python jsc_pydecrypt_tool.py -d project.jsc "secret" project.js```
+
+# Badges
+![GitHub](https://img.shields.io/github/license/bartlomiejduda/JSC-PyDecrypt-Tool?style=plastic)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![GitHub repo size](https://img.shields.io/github/repo-size/bartlomiejduda/JSC-PyDecrypt-Tool?style=plastic)
+![GitHub all releases](https://img.shields.io/github/downloads/bartlomiejduda/JSC-PyDecrypt-Tool/total)
+![GitHub last commit](https://img.shields.io/github/last-commit/bartlomiejduda/JSC-PyDecrypt-Tool?style=plastic)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/bartlomiejduda/JSC-PyDecrypt-Tool?style=plastic)

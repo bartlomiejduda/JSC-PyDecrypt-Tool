@@ -1,6 +1,6 @@
 cffi==1.17.1
 pre-commit==4.0.1
 pytest==8.3.3
-ReverseBox>=0.18.5
+ReverseBox>=0.49.5
 xxtea==3.3.0
 xxtea-py==1.0.3
