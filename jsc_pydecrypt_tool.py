@@ -1,3 +1,8 @@
+"""
+Copyright © 2025  Bartłomiej Duda
+License: GPL-3.0 License
+"""
+
 import argparse
 import gzip
 import io
